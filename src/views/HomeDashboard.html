@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Allocation Tool</title>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+<h1> Welcome to the Project Allocation Tool Homepage.</h1>
+<div>
+    <label>Add new student cohort:</label>
+    <div>
+        <label>Cohort Name </label>
+        <input id="studentCohort" type="text" name="cohortName"/>
+        <label>Cohort Year </label>
+        <input id="cohortYear" type="number" name="cohortYear" min="2000" placeholder="2000"/>
+    </div>
+    <input id="submitBox" type="submit" value="Add"/>
+</div>
+<p> Please select one of the following cohorts available.</p>
+<ul id="cohortsList"></ul>
+
+<script>
+    const fetchCohorts = function () {
+        $.ajax({
+            url: "Homepage/StudentCohorts",
+            method: "GET",
+        }).then((data) => {
+            /*Populate list*/
+            Object.values(data).forEach((cohort) => {
+                const name = cohort.cohortName;
+                const year = cohort.cohortYear;
+                const id = year + "-" + name;
+                const hrefLink = "'" + "Allocation/" + year + "/" + name + "/" + "'";
+                $('#cohortsList').append("<li class='cohortElement'><a id=" + id + " href=" + hrefLink + ">" + year + ": " + name + "</a></li>");
+            })
+        }).catch((error) => {
+            /*Show error*/
+            alert("Data was not loaded.");
+            console.log(error.message);
+        });
+    };
+
+    fetchCohorts();
+
+    $('#submitBox').click(() => {
+        $.ajax({
+            url: "Homepage/addCohort",
+            method: "POST",
+            data: {
+                cohortName: $("#studentCohort")[0].value,
+                cohortYear: $("#cohortYear")[0].value
+            }
+        }).then(() => {
+            $('.cohortElement').remove();
+            fetchCohorts();
+        }).catch(() => {
+            alert("Cohort was not created.");
+        })
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,556 @@
+{
+  "tableData": [
+    {
+      "username": "rd196",
+      "id": "643768366",
+      "firstName": "Rose",
+      "lastName": "de la Rue",
+      "degreeIntention": "MSc Advanced Computer Science",
+      "dissCode": "CS5099",
+      "projectTitle": "Tetete",
+      "supervisor": "Dorothy Bellafonte",
+      "secondSupervisor": "Jane Hazelnut",
+      "secondMarker": "",
+      "notes": "saadsa"
+    },
+    {
+      "username": "rh392",
+      "id": "622549286",
+      "firstName": "Rory",
+      "lastName": "Henderson",
+      "degreeIntention": "MSc Management and IT",
+      "dissCode": "IS5188",
+      "projectTitle": "asdaa",
+      "supervisor": "Donna Gerrard",
+      "secondSupervisor": "Dorothy Bellafonte",
+      "secondMarker": "",
+      "notes": "adsda"
+    },
+    {
+      "username": "gh392",
+      "id": "154189663",
+      "firstName": "George",
+      "lastName": "Henderson",
+      "degreeIntention": "MSc Management and IT",
+      "dissCode": "IS5189",
+      "projectTitle": "sadasd",
+      "supervisor": "Rob May",
+      "secondSupervisor": "Alex Henderson",
+      "secondMarker": "",
+      "notes": "casca"
+    },
+    {
+      "username": "th577",
+      "id": "931598689",
+      "firstName": "Terry",
+      "lastName": "Hodgekin",
+      "degreeIntention": "MSc Software Engineering",
+      "dissCode": "CS5099",
+      "projectTitle": "dssss",
+      "supervisor": "Callum Baresi",
+      "secondSupervisor": "Ronald Inzhagi",
+      "secondMarker": "",
+      "notes": "asdasda"
+    },
+    {
+      "username": "rh775",
+      "id": "826137538",
+      "firstName": "Ronald",
+      "lastName": "Hodgekin",
+      "degreeIntention": "MSc Advanced Computer Science",
+      "dissCode": "CS5098",
+      "projectTitle": "Test222",
+      "supervisor": "Donna Gerrard",
+      "secondSupervisor": "Robert Sterling",
+      "secondMarker": "",
+      "notes": "sadsda"
+    },
+    {
+      "username": "nj639",
+      "id": "694541158",
+      "firstName": "Norm",
+      "lastName": "Jordan",
+      "degreeIntention": "MSc Software Engineering",
+      "dissCode": "",
+      "projectTitle": "TETes",
+      "supervisor": "",
+      "secondSupervisor": "",
+      "secondMarker": "",
+      "notes": ""
+    },
+    {
+      "username": "ij577",
+      "id": "513794875",
+      "firstName": "Ingrid",
+      "lastName": "Jordan",
+      "degreeIntention": "MSc Human Computer Interaction",
+      "dissCode": "",
+      "projectTitle": "",
+      "supervisor": "",
+      "secondSupervisor": "",
+      "secondMarker": "",
+      "notes": ""
+    },
+    {
+      "username": "wj184",
+      "id": "399269235",
+      "firstName": "Will",
+      "lastName": "Jordan",
+      "degreeIntention": "MSc Software Engineering",
+      "dissCode": "",
+      "projectTitle": "",
+      "supervisor": "",
+      "secondSupervisor": "",
+      "secondMarker": "",
+      "notes": ""
+    },
+    {
+      "username": "sj692",
+      "id": "474475769",
+      "firstName": "Sven",
+      "lastName": "Jordan",
+      "degreeIntention": "MSc Information Technology",
+      "dissCode": "IS5199",
+      "projectTitle": "aasdas",
+      "supervisor": "Robert Sterling",
+      "secondSupervisor": "Rob May",
+      "secondMarker": "",
+      "notes": "sdasda"
+    },
+    {
+      "username": "cm830",
+      "id": "446841886",
+      "firstName": "Callum",
+      "lastName": "McDonald",
+      "degreeIntention": "MSc Artificial Intelligence",
+      "dissCode": "",
+      "projectTitle": "",
+      "supervisor": "",
+      "secondSupervisor": "",
+      "secondMarker": "",
+      "notes": ""
+    },
+    {
+      "username": "or360",
+      "id": "617843849",
+      "firstName": "Ophelia",
+      "lastName": "Rahman",
+      "degreeIntention": "MSc Data Intensive Analysis",
+      "dissCode": "",
+      "projectTitle": "",
+      "supervisor": "",
+      "secondSupervisor": "",
+      "secondMarker": "",
+      "notes": ""
+    },
+    {
+      "username": "st797",
+      "id": "255927849",
+      "firstName": "Sven",
+      "lastName": "Tamagochi",
+      "degreeIntention": "MSc Human Computer Interaction",
+      "dissCode": "",
+      "projectTitle": "",
+      "supervisor": "",
+      "secondSupervisor": "",
+      "secondMarker": "",
+      "notes": ""
+    },
+    {
+      "username": "jt615",
+      "id": "981691421",
+      "firstName": "John",
+      "lastName": "Trapp",
+      "degreeIntention": "MSc Advanced Computer Science",
+      "dissCode": "",
+      "projectTitle": "",
+      "supervisor": "",
+      "secondSupervisor": "",
+      "secondMarker": "",
+      "notes": ""
+    },
+    {
+      "username": "jz582",
+      "id": "451599133",
+      "firstName": "Julian",
+      "lastName": "Zhao",
+      "degreeIntention": "MSc Artificial Intelligence",
+      "dissCode": "",
+      "projectTitle": "",
+      "supervisor": "",
+      "secondSupervisor": "",
+      "secondMarker": "",
+      "notes": ""
+    },
+    {
+      "username": "lz154",
+      "id": "126964489",
+      "firstName": "Lauren",
+      "lastName": "Zhao",
+      "degreeIntention": "MSc Human Computer Interaction",
+      "dissCode": "",
+      "projectTitle": "",
+      "supervisor": "",
+      "secondSupervisor": "",
+      "secondMarker": "",
+      "notes": ""
+    }
+  ],
+  "staffData": [
+    {
+      "engagementNumber": "382518667/1",
+      "Id": "382518667",
+      "username": "cb237",
+      "title": "Mr",
+      "givenNames": "Callum",
+      "familyName": "Baresi",
+      "email": "cb237@st-andrews.ac.uk"
+    },
+    {
+      "engagementNumber": "471346184/1",
+      "Id": "471346184",
+      "username": "db491",
+      "title": "Miss",
+      "givenNames": "Dorothy",
+      "familyName": "Bellafonte",
+      "email": "db491@st-andrews.ac.uk"
+    },
+    {
+      "engagementNumber": "317547555/1",
+      "Id": "317547555",
+      "username": "dg601",
+      "title": "Miss",
+      "givenNames": "Donna",
+      "familyName": "Gerrard",
+      "email": "dg601@st-andrews.ac.uk"
+    },
+    {
+      "engagementNumber": "376129722/1",
+      "Id": "376129722",
+      "username": "jh147",
+      "title": "Miss",
+      "givenNames": "Jane",
+      "familyName": "Hazelnut",
+      "email": "jh147@st-andrews.ac.uk"
+    },
+    {
+      "engagementNumber": "378886543/1",
+      "Id": "378886543",
+      "username": "ah492",
+      "title": "Mr",
+      "givenNames": "Alex",
+      "familyName": "Henderson",
+      "email": "ah492@st-andrews.ac.uk"
+    },
+    {
+      "engagementNumber": "633884558/1",
+      "Id": "633884558",
+      "username": "jh505",
+      "title": "Miss",
+      "givenNames": "Juanita",
+      "familyName": "Honda",
+      "email": "jh505@st-andrews.ac.uk"
+    },
+    {
+      "engagementNumber": "877477128/1",
+      "Id": "877477128",
+      "username": "ri460",
+      "title": "Mr",
+      "givenNames": "Ronald",
+      "familyName": "Inzhagi",
+      "email": "ri460@st-andrews.ac.uk"
+    },
+    {
+      "engagementNumber": "633561695/1",
+      "Id": "633561695",
+      "username": "si646",
+      "title": "Miss",
+      "givenNames": "Sarah",
+      "familyName": "Inzhagi",
+      "email": "si646@st-andrews.ac.uk"
+    },
+    {
+      "engagementNumber": "917838165/1",
+      "Id": "917838165",
+      "username": "rm438",
+      "title": "Mr",
+      "givenNames": "Rob",
+      "familyName": "May",
+      "email": "rm438@st-andrews.ac.uk"
+    },
+    {
+      "engagementNumber": "926773214/1",
+      "Id": "926773214",
+      "username": "er420",
+      "title": "Mr",
+      "givenNames": "Elvis",
+      "familyName": "Rahman",
+      "email": "er420@st-andrews.ac.uk"
+    },
+    {
+      "engagementNumber": "595645765/1",
+      "Id": "595645765",
+      "username": "jr450",
+      "title": "Mr",
+      "givenNames": "Jing",
+      "familyName": "Roberts",
+      "email": "jr450@st-andrews.ac.uk"
+    },
+    {
+      "engagementNumber": "384273429/1",
+      "Id": "384273429",
+      "username": "ms113",
+      "title": "Mr",
+      "givenNames": "Miles",
+      "familyName": "Scholes",
+      "email": "ms113@st-andrews.ac.uk"
+    },
+    {
+      "engagementNumber": "831863996/1",
+      "Id": "831863996",
+      "username": "rs145",
+      "title": "Mr",
+      "givenNames": "Robert",
+      "familyName": "Sterling",
+      "email": "rs145@st-andrews.ac.uk"
+    },
+    {
+      "engagementNumber": "234896662/1",
+      "Id": "234896662",
+      "username": "as511",
+      "title": "Mr",
+      "givenNames": "Abdul",
+      "familyName": "Sterling",
+      "email": "as511@st-andrews.ac.uk"
+    },
+    {
+      "engagementNumber": "934785119/1",
+      "Id": "934785119",
+      "username": "sz605",
+      "title": "Miss",
+      "givenNames": "Sarah",
+      "familyName": "Zhao",
+      "email": "sz605@st-andrews.ac.uk"
+    }
+  ],
+  "moduleData": [
+    {
+      "title": "MSc Data Intensive Analysis",
+      "code": 643768366,
+      "abbreviation": "MSc DIA",
+      "dissertationOptions": [
+        "CS5099",
+        "CS5098"
+      ]
+    },
+    {
+      "title": "MSc Software Engineering",
+      "code": 643768366,
+      "abbreviation": "MSc SE",
+      "dissertationOptions": [
+        "CS5099",
+        "CS5098"
+      ]
+    },
+    {
+      "title": "MSc Human Computer Interaction",
+      "code": 643768366,
+      "abbreviation": "MSc HCI",
+      "dissertationOptions": [
+        "CS5099",
+        "CS5098"
+      ]
+    },
+    {
+      "title": "MSc Advanced Computer Science",
+      "code": 643768366,
+      "abbreviation": "MSc ACS",
+      "dissertationOptions": [
+        "CS5099",
+        "CS5098"
+      ]
+    },
+    {
+      "title": "MSc Artificial Intelligence",
+      "code": 643768366,
+      "abbreviation": "MSc AI",
+      "dissertationOptions": [
+        "CS5099",
+        "CS5098"
+      ]
+    },
+    {
+      "title": "MSc Computing and Information Technology",
+      "code": 643768366,
+      "abbreviation": "MSc C&IT",
+      "dissertationOptions": [
+        "IS5199",
+        "IS5198",
+        "CS5099",
+        "CS5098"
+      ]
+    },
+    {
+      "title": "MSc Information Technology",
+      "code": 643768366,
+      "abbreviation": "MSc IT",
+      "dissertationOptions": [
+        "IS5199",
+        "IS5198"
+      ]
+    },
+    {
+      "title": "MSc Management and IT",
+      "code": 643768366,
+      "abbreviation": "MSc M&IT",
+      "dissertationOptions": [
+        "IS5189",
+        "IS5188"
+      ]
+    },
+    {
+      "title": "European MSc Dependable Software Systems",
+      "code": 643768366,
+      "abbreviation": "MSc DESEM",
+      "dissertationOptions": [
+        "CS5899"
+      ]
+    },
+    {
+      "title": "Erasmus Mundus MSc Advanced Systems Dependability",
+      "code": 643768366,
+      "abbreviation": "MSc DEPEND",
+      "dissertationOptions": [
+        "CS5899"
+      ]
+    },
+    {
+      "title": "BSc (Hons) Computer Science",
+      "code": 643768366,
+      "abbreviation": "BSc CS",
+      "dissertationOptions": [
+        "CS4099"
+      ]
+    },
+    {
+      "title": "BSc (Hons) Computer Science and Management",
+      "code": 643768366,
+      "abbreviation": "BSc CS/Mgt",
+      "dissertationOptions": [
+        "CS4098",
+        "CS4796"
+      ]
+    },
+    {
+      "title": "BSc (Hons) Computer Science and Mathematics",
+      "code": 643768366,
+      "abbreviation": "BSc CS/Math",
+      "dissertationOptions": [
+        "CS4098",
+        "CS4796",
+        "MT4796"
+      ]
+    },
+    {
+      "title": "BSc (Hons) Computer Science and Physics",
+      "code": 643768366,
+      "abbreviation": "BSc CS/Phy",
+      "dissertationOptions": [
+        "CS4098",
+        "CS4796",
+        "PH4796"
+      ]
+    },
+    {
+      "title": "BSc (Hons) Computer Science and Philosophy",
+      "code": 643768366,
+      "abbreviation": "BSc CS/Phil",
+      "dissertationOptions": [
+        "CS4098",
+        "CS4796",
+        "PY4796"
+      ]
+    },
+    {
+      "title": "MSci (Hons) Computer Science",
+      "code": 643768366,
+      "abbreviation": "MSci CS",
+      "dissertationOptions": [
+        "CS4099",
+        "CS5199"
+      ]
+    }
+  ],
+  "dissertationData": [
+    {
+      "code": "CS5099",
+      "title": "Dissertation in Computer Science (60 credits)",
+      "external": false
+    },
+    {
+      "code": "IS5189",
+      "title": "Dissertation in Management and IT (60 credits)",
+      "external": false
+    },
+    {
+      "code": "IS5199",
+      "title": "Dissertation in Information Technology (60 credits)",
+      "external": false
+    },
+    {
+      "code": "CS5098",
+      "title": "Group Dissertation in Computer Science (60 credits)",
+      "external": false
+    },
+    {
+      "code": "IS5188",
+      "title": "Group Dissertation in Management and IT  (60 credits)",
+      "external": false
+    },
+    {
+      "code": "IS5198",
+      "title": "Group Dissertation in Information Technology  (60 credits)",
+      "external": false
+    },
+    {
+      "code": "CS4099",
+      "title": "Major Software Project",
+      "external": false
+    },
+    {
+      "code": "CS4098",
+      "title": "Minor Software Project",
+      "external": false
+    },
+    {
+      "code": "CS4796",
+      "title": "Joint Project",
+      "external": false
+    },
+    {
+      "code": "CS5199",
+      "title": "Individual Masters Project",
+      "external": false
+    },
+    {
+      "code": "CS5899",
+      "title": "Erasmus Mundus Dissertation in Dependable Software Systems",
+      "external": false
+    },
+    {
+      "code": "MT4796",
+      "title": "Joint Project (Maths)",
+      "external": true
+    },
+    {
+      "code": "PH4796",
+      "title": "Joint Project (Physics)",
+      "external": true
+    },
+    {
+      "code": "PY4796",
+      "title": "Joint Project (Philosophy)",
+      "external": true
+    }
+  ]
+}

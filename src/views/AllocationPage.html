@@ -1,0 +1,381 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Project Allocation Tool </title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+    <script src="//d3js.org/d3.v3.min.js"></script>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <!--    &lt;!&ndash;Bootstrap libraries&ndash;&gt;-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <!--Bootstrap libraries-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/stylesheets/dashboard.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+
+    <!-- Autocomplete Widget - http://api.jqueryui.com/autocomplete/ -->
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+    <!-- Source Files -->,
+    <script type='module' src="/javascripts/ClientMain.js"></script>
+    <script type='module' src="/javascripts/Visualisations.js"></script>
+
+</head>
+
+<style>
+    .import-section {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .alert {
+        margin: 20px;
+    }
+
+    .alert-success {
+        display: inline-block;
+    }
+
+    #toastDiv,
+    #mainDiv {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 25px;
+    }
+
+
+    #toastDiv {
+        z-index: 10;
+    }
+
+</style>
+
+
+<body>
+<!-- Header Bar -->
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item text-nowrap py-1 px-3">
+            <button id="saveButton" class="nav-item">Save changes</button>
+        </li>
+        <li class="nav-item text-nowrap">
+            <input class="form-control form-control-dark flex-md-nowrap" type="text" id="searchTable"
+                   placeholder="Search table..." disabled>
+        </li>
+    </ul>
+</nav>
+
+<!-- This whole section spans the entire width of the viewport - for proper alignment and padding-->
+<div class="container-fluid" style="position: absolute">
+    <div id="mainDiv" class="row">
+        <!-- Create  Sidebar Navigation -->
+        <nav class="col-xl-1 col-lg-3 col-sm-3 col-md-3 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <!-- Active Class labels which page is currently being used -->
+                        <a id="importDataNav" class="nav-link active" data-toggle="tab">
+                            Import Data
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="allocationNav" class="nav-link" data-toggle="tab">
+                            Project Allocation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="staffNav" class="nav-link" data-toggle="tab">Faculty Staff</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="visualisationNav" class="nav-link" data-toggle="tab">Visualisation</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!-- FIRST PAGE - Import Page. For importing new data/Past Saved Data/Most Recent Save -->
+        <main id="importPage" role="main" class="col-xl-11 col-lg-9 col-sm-9 col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Import CSV</h1>
+            </div>
+
+            <div class="import-section">
+                <h4 class="h4">i. Import Supervisors CSV</h4>
+                <!-- Import CSV 1 File with Format Help -->
+                <div class="btn-group mr-2">
+                    <form method="post" enctype="multipart/form-data" id="sup-upload-form">
+                        <input type="file" class="btn btn-sm btn-outline-secondary filestyle" id="sup-upload"
+                               data-placeholder=".csv format"
+                               accept=".csv"/>
+                    </form>
+                    <br>
+                </div>
+                <button class="btn btn-sm btn-outline-secondary " data-toggle="collapse"
+                        data-target="#formatSupervisors">Format of File?
+                </button>
+                <div id="formatSupervisors" class="collapse ">
+                    CSV file with headers: Engagement no; Staff ID; Username; Title; Given names; Family name; Email
+                </div>
+                <div class="successOrNot alert alert-success" id="progressMessageInput-sup-upload" hidden>Success</div>
+                <div class="successOrNot alert alert-danger" id="progressMessageInput-sup-upload-failure" hidden>
+                    <strong> Wrong Format!</strong> Please submit a CSV file with headers in the first row as described
+                    in the format section.
+                </div>
+            </div>
+
+            <div class="import-section">
+                <h4 class="h4">ii. Import Students CSV</h4>
+                <!-- Import CSV 2 File with Format Help -->
+                <div class="btn-group mr-2">
+                    <form method="post" enctype="multipart/form-data" id="stu-upload-form">
+                        <input type="file" class="btn btn-sm btn-outline-secondary filestyle" id="stu-upload"
+                               data-placeholder=".csv format"
+                               accept=".csv"/>
+                    </form>
+                </div>
+                <button class="btn btn-sm btn-outline-secondary " data-toggle="collapse" data-target="#formatStudents">
+                    Format of File?
+                </button>
+                <div id="formatStudents" class="collapse ">
+                    CSV file with headers: Engagement no; Student ID; Username; Title; Given names; Family name; Email;
+                    Date of birth; Full/part time; Registration status; Qualification awarded; Class awarded; Faculty;
+                    Student type; Programme name; Degree intention; Degree
+                </div>
+                <div class="successOrNot alert alert-success" id="progressMessageInput-stu-upload" hidden>Success</div>
+                <div class="successOrNot alert alert-danger" id="progressMessageInput-stu-upload-failure" hidden>
+                    <strong> Wrong
+                        Format!</strong> Please submit a CSV file with headers in the first row as described in the
+                    format
+                    section.
+                </div>
+            </div>
+
+            <!--            MODULE INFORMATION LOADING-->
+            <div class="import-section">
+                <h4 class="h4">iii. Import Module Options JSON</h4>
+                <!-- Import CSV 2 File with Format Help -->
+                <div class="btn-group mr-2">
+                    <form method="post" enctype="multipart/form-data" id="moduleOptionsUploadForm">
+                        <input type="file" class="btn btn-sm btn-outline-secondary filestyle" id="moduleOptionsUpload"
+                               data-placeholder=".json format"
+                               accept=".json"/>
+                    </form>
+                </div>
+                <div class="successOrNot alert alert-success" id="progressMessageInput-moduleOptionsUpload" hidden>
+                    Success
+                </div>
+                <div class="successOrNot alert alert-danger" id="progressMessageInput-moduleOptionsUpload-failure"
+                     hidden>
+                    <strong> Wrong
+                        Format!</strong> Please submit a JSON file with headers in the first row as described in the
+                    format
+                    section.
+                </div>
+            </div>
+
+            <!--            DISSERTATION INFORMATION LOADING-->
+            <div class="import-section">
+                <h4 class="h4">iv. Import Dissertation Options JSON</h4>
+                <!-- Import CSV 2 File with Format Help -->
+                <div class="btn-group mr-2">
+                    <form method="post" enctype="multipart/form-data" id="dissertationUploadForm">
+                        <input type="file" class="btn btn-sm btn-outline-secondary filestyle" id="dissertationUpload"
+                               data-placeholder=".json format"
+                               accept=".json"/>
+                    </form>
+                </div>
+                <div class="successOrNot alert alert-success" id="progressMessageInput-dissertationUpload" hidden>
+                    Success
+                </div>
+                <div class="successOrNot alert alert-danger" id="progressMessageInput-dissertationUpload-failure"
+                     hidden>
+                    <strong> Wrong
+                        Format!</strong> Please submit a JSON file with headers in the first row as described in the
+                    format
+                    section.
+                </div>
+            </div>
+
+            <div class="import-section">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Load From Downloaded File</h1>
+                </div>
+                <div class="btn-group mr-2">
+                    <form method="post" enctype="multipart/form-data" id="inputSavedProgressSetup-form">
+                        <input class="btn btn-sm btn-outline-secondary filestyle" type="file"
+                               id="inputSavedProgressSetUp"
+                               data-placeholder=".json format" accept=".json"><br>
+                    </form>
+                </div>
+                <div class="successOrNot alert alert-success" id="progressMessageInput-savedProgress" hidden>Success
+                </div>
+                <div class="successOrNot alert alert-danger" id="progressMessageInput-savedProgress-failure" hidden>
+                    Wrong Format!
+                </div>
+            </div>
+
+            <div id="addRows">
+                <div class="import-section">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">Add Rows</h1>
+                    </div>
+                    <h4 class="h4">i. Add Supervisors</h4>
+                    <div class="btn-group mr-2">
+                        <input type="file" class="filestyle" id="supervisorReupload" data-placeholder=".csv format"
+                               accept=".csv"/>
+                    </div>
+                    <div class="successOrNot alert alert-success" id="progressMessageInput-supervisorReupload" hidden>
+                        Success
+                    </div>
+                    <div class="successOrNot alert alert-danger" id="progressMessageInput-supervisorReupload-failure"
+                         hidden>
+                        <strong> Wrong Format!</strong> Please submit a CSV file with headers in the first row as
+                        described
+                        in the format section.
+                    </div>
+                </div>
+
+                <div class="import-section">
+                    <h4 class="h4">ii. Add Students</h4>
+                    <div class="btn-group mr-2">
+                        <input type="file" class="filestyle" id="studentReupload" data-placeholder=".csv format"
+                               accept=".csv"/>
+                    </div>
+                    <div class="successOrNot alert alert-success" id="progressMessageInput-studentReupload" hidden>
+                        Success
+                    </div>
+                    <div class="successOrNot alert alert-danger" id="progressMessageInput-studentReupload-failure"
+                         hidden>
+                        <strong> Wrong Format!</strong> Please submit a CSV file with headers in the first row as
+                        described
+                        in the format section.
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <!-- SECOND PAGE - Project Allocation Page with table -->
+        <main id="projectAllocationPage" role="main"
+              class="col-xl-11 col-lg-9 col-sm-9 col-md-9 ml-sm-auto col-lg-10 px-4" hidden>
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Student Project Allocation</h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <div class="btn-group mr-1">
+                        <button class="btn btn-sm btn-outline-secondary" id="download">
+                            Download progress
+                        </button>
+                    </div>
+
+                    <!-- Buttons for download and exporting -->
+                    <div class="dropleft">
+                        <button id="dataExportButton" class="btn btn-md btn-outline-secondary dropdown-toggle"
+                                type="button"
+                                data-toggle="dropdown">Export
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Table</li>
+                            <li><a id="csvExportButton" class="dropdown-item">CSV</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-header">MMS</li>
+                            <li><a id="csvMmsGroupButton" class="dropdown-item">Groups</a></li>
+                            <li><a id="csvMmsSupervisorButton" class="dropdown-item">Supervisors</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-header">Studres Format</li>
+                            <li><a id="pdfExportDataButton" class="dropdown-item">PDF</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="alert alert-danger" hidden>
+                <strong>No Data!</strong> Please either import supervisor & student CSV data or upload a previously
+                saved session in the Import Section.
+            </div>
+
+            <!-- Table with bootstrap formatting -->
+            <table id="allocationTable" class="table table-hover">
+                <caption>Go to the import section to add new students/supervisors.</caption>
+            </table>
+        </main>
+
+        <!-- THIRD PAGE - Faculty Staff Page with table -->
+        <main id="facultyStaffPage" role="main" class="col-xl-11 col-lg-9 col-sm-9 col-md-9 ml-sm-auto col-lg-10 px-4"
+              hidden>
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Faculty Staff Overview</h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <div class="btn-group mr-2">
+
+                    </div>
+                </div>
+            </div>
+            <!-- Warning message if no data -->
+            <div class="alert alert-danger" hidden>
+                <strong>No Data!</strong> Please either import supervisor & student CSV data or upload a previously
+                saved session in the Import Section.
+            </div>
+            <!-- Table which is dynamically made -->
+            <table id="staffTotalsTable" class="table">
+            </table>
+        </main>
+
+        <!-- Visualisation Page -->
+        <main id="visualisationPage" role="main" class="col-xl-11 col-lg-9 col-sm-9 col-md-9 ml-sm-auto col-lg-10 px-4"
+              hidden>
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Visualisation</h1>
+            </div>
+            <div class="row" id="visualisations">
+                <div class="col">
+                    <h1 class="h5">Project Allocation Summary</h1>
+                    <div id="dataPanel"></div>
+                </div>
+            </div>
+            <!-- Warning message if no data -->
+            <div class="alert alert-danger" hidden>
+                <strong>No Data!</strong> Please either import supervisor & student CSV data or upload a previously
+                saved session in the Import Section.
+            </div>
+        </main>
+    </div>
+</div>
+
+
+<!--Sourced from: https://getbootstrap.com/docs/4.2/components/toasts-->
+<div id="toastDiv" aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;" hidden>
+    <div class="toast" style="position: absolute; top: 50px; right: 50px; background-color: #a8a8a8">
+        <div class="toast-header" style="background-color: #8f0000">
+            <strong class="mr-auto" style="color: #0c0d0e">Attention!</strong>
+            <button id="toastButton" type="button" class="ml-2 mb-1 close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div id="toastMessage" class="toast-body">
+            The student and/or staff data was not loaded!
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>

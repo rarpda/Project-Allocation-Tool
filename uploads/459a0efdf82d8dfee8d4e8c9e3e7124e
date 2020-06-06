@@ -1,0 +1,72 @@
+[
+  {
+    "code": "CS5099",
+    "title": "Dissertation in Computer Science (60 credits)",
+    "external": false
+  },
+  {
+    "code": "IS5189",
+    "title": "Dissertation in Management and IT (60 credits)",
+    "external": false
+  },
+  {
+    "code": "IS5199",
+    "title": "Dissertation in Information Technology (60 credits)",
+    "external": false
+  },
+  {
+    "code": "CS5098",
+    "title": "Group Dissertation in Computer Science (60 credits)",
+    "external": false
+  },
+  {
+    "code": "IS5188",
+    "title": "Group Dissertation in Management and IT  (60 credits)",
+    "external": false
+  },
+  {
+    "code": "IS5198",
+    "title": "Group Dissertation in Information Technology  (60 credits)",
+    "external": false
+  },
+  {
+    "code": "CS4099",
+    "title": "Major Software Project",
+    "external": false
+  },
+  {
+    "code": "CS4098",
+    "title": "Minor Software Project",
+    "external": false
+  },
+  {
+    "code": "CS4796",
+    "title": "Joint Project",
+    "external": false
+  },
+  {
+    "code": "CS5199",
+    "title": "Individual Masters Project",
+    "external": false
+  },
+  {
+    "code": "CS5899",
+    "title": "Erasmus Mundus Dissertation in Dependable Software Systems",
+    "external": false
+  },
+  {
+    "code": "MT4796",
+    "title": "Joint Project (Maths)",
+    "external": true
+  },
+  {
+    "code": "PH4796",
+    "title": "Joint Project (Physics)",
+    "external": true
+  },
+  {
+    "code": "PY4796",
+    "title": "Joint Project (Philosophy)",
+    "external": true
+  }
+]

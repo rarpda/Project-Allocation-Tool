@@ -1,0 +1,148 @@
+[
+  {
+    "title": "MSc Data Intensive Analysis",
+    "code": 643768366,
+    "abbreviation": "MSc DIA",
+    "dissertationOptions": [
+      "CS5099",
+      "CS5098"
+    ]
+  },
+  {
+    "title": "MSc Software Engineering",
+    "code": 643768366,
+    "abbreviation": "MSc SE",
+    "dissertationOptions": [
+      "CS5099",
+      "CS5098"
+    ]
+  },
+  {
+    "title": "MSc Human Computer Interaction",
+    "code": 643768366,
+    "abbreviation": "MSc HCI",
+    "dissertationOptions": [
+      "CS5099",
+      "CS5098"
+    ]
+  },
+  {
+    "title": "MSc Advanced Computer Science",
+    "code": 643768366,
+    "abbreviation": "MSc ACS",
+    "dissertationOptions": [
+      "CS5099",
+      "CS5098"
+    ]
+  },
+  {
+    "title": "MSc Artificial Intelligence",
+    "code": 643768366,
+    "abbreviation": "MSc AI",
+    "dissertationOptions": [
+      "CS5099",
+      "CS5098"
+    ]
+  },
+  {
+    "title": "MSc Computing and Information Technology",
+    "code": 643768366,
+    "abbreviation": "MSc C&IT",
+    "dissertationOptions": [
+      "IS5199",
+      "IS5198",
+      "CS5099",
+      "CS5098"
+    ]
+  },
+  {
+    "title": "MSc Information Technology",
+    "code": 643768366,
+    "abbreviation": "MSc IT",
+    "dissertationOptions": [
+      "IS5199",
+      "IS5198"
+    ]
+  },
+  {
+    "title": "MSc Management and IT",
+    "code": 643768366,
+    "abbreviation": "MSc M&IT",
+    "dissertationOptions": [
+      "IS5189",
+      "IS5188"
+    ]
+  },
+  {
+    "title": "European MSc Dependable Software Systems",
+    "code": 643768366,
+    "abbreviation": "MSc DESEM",
+    "dissertationOptions": [
+      "CS5899"
+    ]
+  },
+  {
+    "title": "Erasmus Mundus MSc Advanced Systems Dependability",
+    "code": 643768366,
+    "abbreviation": "MSc DEPEND",
+    "dissertationOptions": [
+      "CS5899"
+    ]
+  },
+  {
+    "title": "BSc (Hons) Computer Science",
+    "code": 643768366,
+    "abbreviation": "BSc CS",
+    "dissertationOptions": [
+      "CS4099"
+    ]
+  },
+  {
+    "title": "BSc (Hons) Computer Science and Management",
+    "code": 643768366,
+    "abbreviation": "BSc CS/Mgt",
+    "dissertationOptions": [
+      "CS4098",
+      "CS4796"
+    ]
+  },
+  {
+    "title": "BSc (Hons) Computer Science and Mathematics",
+    "code": 643768366,
+    "abbreviation": "BSc CS/Math",
+    "dissertationOptions": [
+      "CS4098",
+      "CS4796",
+      "MT4796"
+    ]
+  },
+  {
+    "title": "BSc (Hons) Computer Science and Physics",
+    "code": 643768366,
+    "abbreviation": "BSc CS/Phy",
+    "dissertationOptions": [
+      "CS4098",
+      "CS4796",
+      "PH4796"
+    ]
+  },
+  {
+    "title": "BSc (Hons) Computer Science and Philosophy",
+    "code": 643768366,
+    "abbreviation": "BSc CS/Phil",
+    "dissertationOptions": [
+      "CS4098",
+      "CS4796",
+      "PY4796"
+    ]
+  },
+  {
+    "title": "MSci (Hons) Computer Science",
+    "code": 643768366,
+    "abbreviation": "MSci CS",
+    "dissertationOptions": [
+      "CS4099",
+      "CS5199"
+    ]
+  }
+]
